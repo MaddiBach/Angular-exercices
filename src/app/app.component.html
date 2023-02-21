@@ -1,0 +1,67 @@
+<h1 id="top">Component Communication Cookbook</h1>
+
+
+
+<!-- #docregion -->
+<!-- <a href="#parent-to-child">Pass data from parent to child with input binding ("Heroes")</a><br/> -->
+<!-- <a href="#parent-to-child-setter">Intercept input property changes with a setter ("Master")</a><br/> -->
+<!-- <a href="#parent-to-child-on-changes">Intercept input property changes with <i>ngOnChanges</i> ("Source code version")</a><br/> -->
+<!-- <a href="#child-to-parent">Parent listens for child event ("Colonize Universe")</a><br/> -->
+<!-- <a href="#parent-to-child-local-var">Parent to child via <i>local variable</i>("Countdown to Liftoff")</a><br/> -->
+<!-- <a href="#parent-to-view-child">Parent calls <i>ViewChild</i>("Countdown  to Liftoff")</a><br/> -->
+<!-- <a href="#bidirectional-service">Parent and children communicate via a service ("Mission Control")</a><br/> -->
+
+<!-- buttons to replace links -->
+<button (click)="toggleParentToChild()">Pass data from parent to child with input binding ("Heroes")</button><br/>
+<button (click)="toggleParentToChildSetter()">Intercept input property changes with a setter ("Master")</button><br/>
+<button (click)="toggleParentToChildOnChanges()">Intercept input property changes with <i>ngOnChanges</i> ("Source code version")</button><br/>
+<button (click)="toggleChildToParent()">Parent listens for child event ("Colonize Universe")</button><br/>
+<button (click)="toggleParentToChildLocalVar()">Parent to child via <i>local variable</i>("Countdown to Liftoff")</button><br/>
+<button (click)="toggleParentToViewChild()">Parent calls <i>ViewChild</i>("Countdown  to Liftoff")</button><br/>
+<button (click)="toggleBidirectionalService()">Parent and children communicate via a service ("Mission Control")</button><br/>
+
+<!-- display ParentToChild -->
+<div *ngIf="showParentToChild">
+  <header>BONJOUR</header>
+  <app-hero-parent></app-hero-parent>
+</div>
+
+<!-- display ParentToChildSetter -->
+<div *ngIf="showParentToChildSetter">
+  <header>BONJOUR</header>
+  <app-name-parent></app-name-parent>
+</div>
+
+<!-- display ParentToChildOnChanges -->
+<div *ngIf="showParentToChildOnChanges">
+  <header>BONJOUR</header>
+  <app-version-parent></app-version-parent>
+</div>
+
+<!-- display ChildToParent -->
+<div *ngIf="showChildToParent">
+  <header>BONJOUR</header>
+  <app-voter></app-voter>
+</div>
+
+<!-- display ParentToChildLocalVar -->
+<div *ngIf="showParentToChildLocalVar">
+  <header>BONJOUR</header>
+  <app-countdown-parent-lv></app-countdown-parent-lv>
+</div>
+
+<!-- display ParentToViewChild -->
+<div *ngIf="showParentToViewChild">
+  <hr>
+  <app-countdown-parent-vc></app-countdown-parent-vc>
+  <hr>
+</div>
+
+<!-- display BidirectionalService -->
+<div *ngIf="showBidirectionalService">
+  <hr>
+  <app-mission-control></app-mission-control>
+  <hr>
+</div>
+
+
